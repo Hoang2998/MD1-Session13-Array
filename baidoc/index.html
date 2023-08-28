@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Array: lưu trữ tập hợp phần tử ( các element khacs nhau) lji với nhau.
+        array; kiểu dữ liệu phức tạp
+        -Giá trị lưu ở vùng bộ nhớ HEAP 
+        -kiểu tham chiếu
+        1.Các khởi tạo mảng
+            -mảng chứa các phần tử ngăn cách vói nhau bằng dấu phẩy.
+            -mảng có thể chứa nhiều kiểu dữ liẹu khác nhau
+        2.Các thuộc tính riêng của mảng
+        -Index: là chỉ mực các phần tử trong mảng:
+        +Chỉ mục của hàng được đánh dấu bắt đàu từ 0
+        -lenght: độ dài của mảng
+        3. Typeof của array là object
+        -Kiểm tra có phải là mảng hay không thì dùng Array.IsArray()
+        4 truy cập các phần tử trong mảng 
+            tên mảng [index];
+        5. CRUD với mảng
+        -C: Create : thêm mới phần tử trong mảng
+            + dùng push(): phương thức thêm phần tử vào vị trí cuối cùng của mảng 
+            + dùng unshift(): phương thúc thêm phần tử vào vị trí đầu của mảng 
+            + thêm trực tiếp theo chỉ mục index
+            + thêm bằng splice(number1,number2,"giá trị mới")
+                +number1 là vị trí
+                +number2 là số phần tử muốn xóa 
+                +number3 là giá trị muốn thêm  
+        -R: Read   : đọc hay hiển thị phần tử của mảng
+                +for : dùng vòng lập truy suất phần tử(dung dc cho cả mảng và string)
+                +for-in : in ra chỉ mục index của mảng
+                +for-of : in ra các các phần tử trong mảng
+        -U: Update : Cập nhập các phần tử trong mảng
+                + update : trực tiếp
+                + splice : dùng 
+        -D: Delete : Xoá các phần tử trong mảng
+                + pop()    : xóa phần tử cuối 
+                + shift()  : xóa phần tử đầu
+                + splice() : xóa phần tử bên trong
+        **********************************
+        
+        Các phương thức làm việc với mảng 
+        1 slice cấu trúc name.slice(vị trí bắt đầu cắt,vị trí kết thúc)(vị bắt đầu từ 0 đến cuối)
+            - cắt sao chép sang một mảng mới không ảnh hưởng tơi mảng cũ 
+            note: dùng đc với cả mảng và cả chuỗi 
+        2 Sort 
+            -Sắp xếp các phần tử trong mảng theo mã ASCI(theo mã bảng chữa cái , chữ đầu )
+        3 revecer(): đảo ngược mảng
+        4 split () : cắt chuỗi thành mảng
+                vd let num = "hello rikke"
+                    console.log(text.split(" ")) tách chuỗi theo dấu cách
+        5 join()   :gộp các phần trong mảng thành một chuỗi
+        6 ToString :biến mảng thành chuỗi ( có khả năng chuyển số thành chuỗi mà join ko làm dc)
+        7 indexOF(): kiểm tra phần tử có trong mảng hay không nếu có trả về vị trí đầu tiên của có , nếu không có trả 
+        về -1
+        8 includes() : tìm kiếm  phần tử trả về true/false
+        9 toUpperCase(): chuyển chữ thường thành chữ Hoa  
+        10 toLowerCase(): chuyển chữ Hoa thành chữ thường
+        11 charAt() : hiển thị phần tử trong chuỗi
+        12 map
+        13 reduce
+        14 filter
+        15 forEach
+        16 find()
+        17 findIndex()
+        18 every()
+        19 some ()
+        20 fill ()
+        21 concat()
+        22 endWidth()
+        23 startWidth()
+     -->
+     <script>
+        let text = "hung beo qua"
+        let result = text.split(" ");
+        console.log(result)
+        let text1 =result[0].split(""); 
+        text1[0]=text1[0].toUpperCase();
+        result[0]=text1.join("");
+        console.log(text1)
+        
+        let text2 =result[1].split(""); 
+        text2[0]=text2[0].toUpperCase();
+        result[1]=text2.join("");
+        console.log(text2)
+
+        let text3 =result[2].split(""); 
+        text3[0]=text3[0].toUpperCase();
+        result[2]=text3.join("");
+        console.log(text3)
+
+        result= result.join(" ")
+        console.log(result );
+     </script> 
+</body>
+</html>

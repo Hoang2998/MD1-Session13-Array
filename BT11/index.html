@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bakery =["chocolate","marshmallow","cookies","chips"]
+        let cart =[]
+        let count = 0
+        let check =0
+        let x=0;
+        console.log(typeof(cart))
+      
+       for (let i=0;i<bakery.length;i++) {
+            let name = i+1 + "." + " " + bakery[i]
+            console.log(name)  
+        }
+    do{
+       let product = prompt("moi nhap sp muon mua")
+        // console.log(bakery.indexOf(product))
+            if(-1 !== bakery.indexOf(product))
+            {
+             for(let k=0;k<cart.length;k++){
+                if(cart.indexOf(product)===-1){
+                    check++ }
+                }
+                if(check==0)
+                {
+                let number = 1;
+                cart[x]= [product,number] 
+                console.log(cart[x]);
+                x++  
+                }
+                            
+            }else{
+            console.log(" We don't have that item")
+            }
+            count++
+        }while(count<5)
+        
+        console.log("cart:",cart);
+</script>
+</body>
+</html>

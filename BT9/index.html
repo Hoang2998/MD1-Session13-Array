@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txtValue">
+    <input type="button" id="btnTranslate" value="TranSlate" onclick="check_element_to_array()">
+    <div id="result"></div>
+    <script>
+        let english = ["apple", "banana", "red", "green"]
+        let vietnamese = ["qua tao", "qua chuoi", "mau do", "mau xanh"]
+        let x = 0
+        let display = "<hr>";
+        function check_element_to_array() {
+            for (x = 0; x < english.length; x++) {
+                if (document.getElementById("txtValue").value == english[x]) {
+                    console.log(document.getElementById("txtValue").value)
+                    display = "<hr>" + "<br>" + vietnamese[x]
+                }
+            }
+            document.getElementById("result").innerHTML = display;
+        }
+    </script>
+</body>
+
+</html>

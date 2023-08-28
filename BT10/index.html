@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let todoList = ["one","two"]
+        var count = 0;
+        do{
+        let menu =prompt("moi nhap C/R/U/D");
+        if(menu=="C"){
+            text =prompt("moi nhap them todo")
+            todoList.push(text)
+            console.log(todoList)
+        }else if(menu=="R"){
+            console.log(todoList)
+        }else if(menu=="U"){
+            let position =prompt("vi tri bn muon update");
+            let content =prompt("noi dung update"); 
+            console.log(todoList)
+            todoList.splice(position,1,content);
+        }else if(menu=="D"){
+            let positionD =prompt("vi tri muon xoa");
+            todoList.splice(positionD,1);
+            console.log(todoList)
+        }else if(menu=="E"){
+            break;
+        }else{
+            alert("moi nhap lai")
+        }
+        count++
+    }while(count>0)
+    </script>
+</body>
+</html>
